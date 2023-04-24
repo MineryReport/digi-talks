@@ -55,10 +55,6 @@ const dataStructures = () => {
     acc.set(item.key, item.val)
     return acc
   },new Map<string, number>())
-  mapEl.set("a", 1)
-  mapEl.set("b", 2)
-  mapEl.set("c", 3)
-  mapEl.set("d", 4)
   performance.mark("map-started")
   const bMap = mapEl.get(key)
   performance.mark("map-end")
@@ -176,6 +172,7 @@ const functionStructures = () => {
   const myContext = { value: 'A'}
   myFunction.call(myContext)
   myFunction.apply(myContext)
+
   console.log(`
           - Durante la invocacion del constructor usando "new" this es la instancia recien creada
   `)

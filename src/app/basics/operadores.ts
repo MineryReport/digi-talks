@@ -96,7 +96,52 @@ const optionalChain = () => {
   console.log("adventurer.unexistingMethod?.()", adventurer.unexistingMethod?.(), "should return undefined"); // undefined
 }
 
-type OperatorExample = 'toBool' | 'nullish' | 'nullishAssign' | 'optionalChain'
+const spread = () => {
+  /**
+   * ... - el "spread operator"
+   * 
+   * Este operador permite convertir un iterable, como un array o un string, ser expandido
+   * en sitios donde cero o más argumentos (como llamadas de funciones) o elementos (para arrays) sean experados.
+   * En un objeto, la sintaxis (...) enumera las propiedades de un objeto y añade los pares
+   * clave-valor al objeto que se esta creando
+   */
+  console.clear()
+
+  console.log(`
+  ... - el "spread operator"
+  
+  Este operador permite convertir un iterable, como un array o un string, ser expandido
+  en sitios donde cero o más argumentos (como llamadas de funciones) o elementos (para arrays) sean experados.
+  En un objeto, la sintaxis (...) enumera las propiedades de un objeto y añade los pares
+  clave-valor al objeto que se esta creando
+  `)
+  function add(a: number,b: number,c: number) {
+    return a + b + c
+  }
+  const obj1 = {
+    a: 2,
+    b: 3
+  }
+  console.log(`
+  function add(a: number,b: number,c: number) {
+    return a + b + c
+  }
+  add(...[1,2,3]) // ${add(...[1,2,3])}
+
+  [1,2, ...[1, 2, 3]] // ${[1,2, ...[1, 2, 3]]}
+
+  const obj1 = {
+    a: 2,
+    b: 3
+  }
+  const newObj = {...obj1, c: 4}
+  `)
+  const newObj = {...obj1, c: 4}
+  console.log(newObj)
+
+}
+
+type OperatorExample = 'toBool' | 'nullish' | 'nullishAssign' | 'optionalChain' | 'spread'
 
 const operators = (example: OperatorExample = 'toBool', log?:(...msg: any[]) => void) => {
   if (log){
@@ -107,7 +152,8 @@ const operators = (example: OperatorExample = 'toBool', log?:(...msg: any[]) => 
     'toBool': toBool,
     'nullish': nullish,
     'nullishAssign': nullishAssignment,
-    'optionalChain': optionalChain
+    'optionalChain': optionalChain,
+    'spread': spread
   }
 
   examples[example]?.()

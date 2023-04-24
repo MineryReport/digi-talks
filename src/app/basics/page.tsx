@@ -49,6 +49,7 @@ export default function Page() {
         {title: "??", act: () => operators("nullish")},
         {title: "??=", act: () => operators("nullishAssign")},
         {title: "?.", act: () => operators("optionalChain")},
+        {title: "...", act: () => operators("spread")},
       ]}/>
       <Section title="Composition" items={[
         {title: "Composition", act: () => composition('composition')},
