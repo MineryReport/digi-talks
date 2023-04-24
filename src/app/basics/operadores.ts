@@ -108,7 +108,7 @@ const spread = () => {
   console.clear()
 
   console.log(`
-  ... - el "spread operator"
+  (...) - el "spread operator"
   
   Este operador permite convertir un iterable, como un array o un string, ser expandido
   en sitios donde cero o más argumentos (como llamadas de funciones) o elementos (para arrays) sean experados.
@@ -128,7 +128,7 @@ const spread = () => {
   }
   add(...[1,2,3]) // ${add(...[1,2,3])}
 
-  [1,2, ...[1, 2, 3]] // ${[1,2, ...[1, 2, 3]]}
+  [1,2, ...[1, 2, 3]] // [${[1,2, ...[1, 2, 3]].toString()}]
 
   const obj1 = {
     a: 2,
