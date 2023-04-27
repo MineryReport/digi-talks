@@ -10,6 +10,11 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <ul className="flex gap-5 text-white pl-10">
           <li><Link href={"/basics"}>Basics</Link></li>
           <li><Link href={"/react"}>React</Link></li>
+          <li><Link href={"/pruebitasjiji"}>pruebitasjiji</Link></li>
+          <li><Link href={"/inputs"}>inputs</Link></li>
+          <li><Link href={"/tags"}>tags</Link></li>
+          <li><Link href={"/composition"}>composition</Link></li>
+          <li><Link href={"/ballet"}>ballet</Link></li>
         </ul>
       </header>
       <main className="flex min-h-screen flex-col items-center justify-center ">
